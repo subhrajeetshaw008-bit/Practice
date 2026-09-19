@@ -33,7 +33,7 @@ Practice/
 │   ├── 02_control_flow_and_loops/   # if/else, for, while, match-case
 │   ├── 06_OOPS/                     # Classes, objects, constructors
 │   └── ...
-├── 🇨  C/                            # Low-level fun with pointers & printf
+├──    C/                            # Low-level fun with pointers & printf
 ├── ➕ C++/
 │   └── Basics/                      # First steps in C++
 ├── 📄 LICENSE
@@ -49,7 +49,7 @@ Folders are numbered roughly in the order topics were learned — scrolling top 
 | Language | Concepts |
 |:--------:|----------|
 | 🐍 **Python** | Basics, control flow, loops, `match`-`case`, OOP (classes & constructors) |
-| 🇨 **C** | I/O with `scanf`/`printf`, basic calculations |
+| 🇨 **C** | I/O with `scanf`/`printf`, basic calculations 1|
 | ➕ **C++** | Fundamentals |
 
 *(This table grows as I learn more — check back later!)*
