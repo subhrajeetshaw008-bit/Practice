@@ -23,10 +23,10 @@ struct node{
 struct node *start=NULL;
 struct node *create_ll(struct node *);
 struct node *display(struct node *);
-/*struct node *insert_beg(struct node *);
+struct node *insert_beg(struct node *);
 struct node *insert_end(struct node *);
 struct node *insert_before(struct node *);
-struct node *insert_after(struct node *);*/
+struct node *insert_after(struct node *);
 
 int main(){
     int option;
@@ -34,11 +34,11 @@ int main(){
         printf("\n\n **** MAIN MENU ****\n");
         printf("\n 1. Create a Linked List");
         printf("\n 2. Display a Linked List");
-       /* printf("\n 3. Insert a node at the beginning");
+        printf("\n 3. Insert a node at the beginning");
         printf("\n 4. Insert a node at the end");
         printf("\n 5. Insert a node before any given node");
-        printf("\n 6. Insert a node after any given node");*/
-        printf("\n 3.EXIT");
+        printf("\n 6. Insert a node after any given node");
+        printf("\n 7.EXIT");
         printf("\n Enter the option: ");
         scanf("%d", &option);
         while (getchar() != '\n');  
@@ -48,17 +48,17 @@ int main(){
                     break;
             case 2: start = display(start);
                     break;
-           /* case 3: start = insert_beg(start);
+            case 3: start = insert_beg(start);
                     break;
             case 4: start = insert_end(start);
                     break;
             case 5: start = insert_before(start);
                     break;  
             case 6: start = insert_after(start);
-                    break;   */   
+                    break;   
         }
     }
-    while (option != 3);
+    while (option != 7);
     return 0;
 }
 
@@ -100,5 +100,77 @@ struct node *display(struct node *start){
         printf("\t%d",ptr->data);
         ptr=ptr->next;
     }
+    return start;
+}
+
+struct node *insert_beg(struct node *start){
+    struct node *new_node;
+    int num;
+    printf("Enter the data to the node:");
+    scanf("%d",&num);
+    new_node = (struct node *)malloc(sizeof(struct node));
+    new_node->data=num;
+    new_node->next=start;
+    new_node->prev=NULL;
+    start->prev=new_node;
+    start=new_node;
+    return start;
+}
+
+struct node *insert_end(struct node *start){
+    struct node *new_node,*ptr;
+    int num;
+    printf("Enter the data to the node:");
+    scanf("%d",&num);
+    new_node = (struct node *)malloc(sizeof(struct node));
+    ptr=start;
+    while(ptr->next!=NULL){
+        ptr=ptr->next;
+    }
+    new_node->data=num;
+    new_node->prev=ptr;
+    new_node->next=NULL;
+    ptr->next=new_node;
+    return start;
+}
+
+struct node *insert_before(struct node *start){
+    struct node *new_node,*ptr,*preptr;
+    int num,val;
+    printf("Enter the data to the node:");
+    scanf("%d",&num);
+    printf("Enter the data before which the node will be entered:");
+    scanf("%d",&val);
+    new_node = (struct node *)malloc(sizeof(struct node));
+    ptr=start;
+    while(ptr->data!=val){
+        preptr=ptr;
+        ptr=ptr->next;
+    }
+    new_node->data=num;
+    preptr->next=new_node;
+    ptr->prev=new_node;
+    new_node->prev=preptr;
+    new_node->next=ptr;
+    return start;
+}
+
+struct node *insert_after(struct node *start){
+    struct node *new_node,*ptr;
+    int num,val;
+     printf("Enter the data to the node:");
+    scanf("%d",&num);
+    printf("Enter the data after which the node will be entered:");
+    scanf("%d",&val);
+    new_node = (struct node *)malloc(sizeof(struct node));
+    ptr=start;
+    while(ptr->data!=val){
+        ptr=ptr->next;
+    }
+    new_node->data=num;
+    new_node->prev=ptr;
+    new_node->next=ptr->next;
+    ptr->next->prev=new_node;
+    ptr->next=new_node;
     return start;
 }
