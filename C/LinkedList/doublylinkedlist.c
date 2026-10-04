@@ -27,6 +27,8 @@ struct node *insert_beg(struct node *);
 struct node *insert_end(struct node *);
 struct node *insert_before(struct node *);
 struct node *insert_after(struct node *);
+struct node *delete_beg(struct node *);
+struct node *delete_end(struct node *);
 
 int main(){
     int option;
@@ -38,7 +40,9 @@ int main(){
         printf("\n 4. Insert a node at the end");
         printf("\n 5. Insert a node before any given node");
         printf("\n 6. Insert a node after any given node");
-        printf("\n 7.EXIT");
+        printf("\n 7. Delete the first node");
+        printf("\n 8. Delete the last node");
+        printf("\n 9. EXIT");
         printf("\n Enter the option: ");
         scanf("%d", &option);
         while (getchar() != '\n');  
@@ -56,9 +60,13 @@ int main(){
                     break;  
             case 6: start = insert_after(start);
                     break;   
+            case 7: start = delete_beg(start);
+                    break;
+            case 8: start = delete_end(start);
+                    break;                
         }
     }
-    while (option != 7);
+    while (option != 9);
     return 0;
 }
 
@@ -172,5 +180,25 @@ struct node *insert_after(struct node *start){
     new_node->next=ptr->next;
     ptr->next->prev=new_node;
     ptr->next=new_node;
+    return start;
+}
+
+struct node *delete_beg(struct node *start){
+    struct node *ptr;
+    ptr=start;
+    ptr->next->prev=NULL;
+    start=start->next;
+    free(ptr);
+    return start;
+}
+
+struct node *delete_end(struct node *start){
+    struct node *ptr;
+    ptr=start;
+    while(ptr->next!=NULL){
+        ptr=ptr->next;
+    }
+    ptr->prev->next=NULL;
+    free(ptr);
     return start;
 }
