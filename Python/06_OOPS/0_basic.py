@@ -6,6 +6,8 @@
    6.Add a class variable to Car that keeps track of number of cars created.(Class Attributes)
    7.Add a static method to the Car class that returns a general description of a car.(Static Method-Decorators)
    8.Use a property decorator in the Car class to make the model attribute read-only.(Property Decorators)
+   9.Demonstrate te usage of isinstance() to check if my_tesla is an instance of Car and ElectricCar.(Class Inheritance and isinstance( function))
+   10.Create two classes Battery and Engine and let the ElectricCar class inherit from both, demonstrating multiple inheritance.(Multiple Inheritance) 
 '''
 class Car:
     total_car = 0
@@ -47,6 +49,8 @@ print(Safari.fuel_type())
 
 
 my_tesla = ElecticCar("Tesla","Model S","85KwH") 
+print(isinstance(my_tesla,Car))
+print(isinstance(my_tesla,ElecticCar))
 print(my_tesla.full_name())    
 print(my_tesla.get_brand())   
 print(my_tesla.fuel_type())
@@ -64,3 +68,20 @@ test=Car("test","test")
 
 print(Car.total_car)
 print(Car.general_description())
+
+
+
+class Battery:
+    def battery_info(self):
+        return "Electric"
+
+class Engine:
+    def engine_info(self):
+        return "EV"
+
+class ElectricCarTwo(Battery, Engine, Car):
+    pass
+
+my_new_tesla = ElectricCarTwo("Tesla","Model V")
+print(my_new_tesla.engine_info())
+print(my_new_tesla.battery_info())
