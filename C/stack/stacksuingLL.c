@@ -43,5 +43,36 @@ int main(){
 
 struct stack *push(struct stack *top,int val){
     struct stack *ptr;
-    
+    ptr=(struct stack *)malloc(sizeof(struct stack));
+    ptr->data=val;
+    if(top==NULL){
+        ptr->next=NULL;
+        top=ptr;
+    }
+    else{
+        ptr->next=top;
+        top=ptr;
+    }
+    return top;
+}
+
+struct stack *pop(struct stack *top){
+    struct stack *ptr;
+    ptr=top;
+    if(top==NULL){
+        printf("\nUNDERFLOW");
+    }
+    else{
+        top=top->next;
+        printf("\nThe data to be deleted is:",ptr->data);
+        free(ptr);
+    }
+    return top;
+}
+
+struct stack *display(struct stack *top){
+    struct stack *ptr;
+    ptr=top;
+    if(top==NULL){
+    }
 }
