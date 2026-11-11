@@ -1,0 +1,5 @@
+#WAP to compare two numbers using ternary operators
+
+a=int(input('Enter the value of a:'))
+b=int(input('Enter the value of b:'))
+print("a is greater than b" if (a>b) else print('a is smaller than b') if (a<b) else print('a is equal to b'))
