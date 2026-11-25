@@ -2,132 +2,167 @@
 
 # 🚀 Practice
 
-### My personal coding playground — Python, C & C++, one bug at a time 🐞
+### My personal coding playground: C, Python, C++ and HTML, one bug at a time 🐞
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![C](https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=black)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
-![Made with](https://img.shields.io/badge/Made%20with-☕%20%26%20Determination-orange?style=for-the-badge)
 
-![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=36BCF7&center=true&vCenter=true&width=500&lines=Learning+by+breaking+things...;One+printf+at+a+time+%F0%9F%98%84;Python+%7C+C+%7C+C%2B%2B+practice+log;Fork+it+and+start+your+own!)
+![GitHub last commit](https://img.shields.io/github/last-commit/subhrajeetshaw008-bit/Practice?style=flat-square)
+![GitHub repo size](https://img.shields.io/github/repo-size/subhrajeetshaw008-bit/Practice?style=flat-square)
+![GitHub language count](https://img.shields.io/github/languages/count/subhrajeetshaw008-bit/Practice?style=flat-square)
 
 </div>
 
 ---
 
-## 🧠 What's this repo about?
+## 🧠 About
 
-This is where I break things, fix them, and (occasionally) figure out *why* they broke. A running logbook of my coding journey — from `Hello, World` to linked lists, stacks, and OOP.
+A running log of my learning, from `Hello, World` to data structures and OOP. Each program is a small, self-contained exercise written while learning a topic. This is practice code, not production code, so expect rough edges and the occasional comment I should have fixed.
 
-No production code here — just honest, unfiltered practice. 💪
+The main focus right now is **data structures in C** (arrays, linked lists, stacks, queues) alongside **Python fundamentals**.
 
 ---
 
-## 📂 Structure
+## 📑 Table of Contents
+
+- [Repository structure](#-repository-structure)
+- [What's covered](#-whats-covered)
+- [Getting started](#-getting-started)
+- [Roadmap](#-roadmap)
+- [License](#-license)
+
+---
+
+## 📂 Repository structure
 
 ```
 Practice/
-├── 🐍 Python/
-│   ├── 01_practice/                 # Baby steps
-│   ├── 02_control_flow_and_loops/   # if/else, for loops, match-case
-│   ├── 03_Strings/                  # Basics, manipulation, formatting
-│   ├── 04_Functions & Modules/      # Functions practice problems
-│   ├── 06_OOPS/                     # Classes, objects, constructors
-│   ├── 07_Other_Topics/             # Decorators (in progress)
-│   └── 0x_Mini_Projects/            # Small projects (Calculator, in progress)
-├── 🇨 C/
-│   ├── LinkedList/                  # Singly, doubly & circular linked lists
-│   ├── stack/                       # Stack using an array & using a linked list
-│   └── NPTEL Practice/              # NPTEL programming problems (weeks 0–7)
-├── ➕ C++/
-│   └── Basics/                      # First steps in C++
-├── 📄 LICENSE
-└── 📘 README.md
+├── C/
+│   ├── Array/             # Sorting, searching, merging, deleting
+│   ├── LinkedList/        # Singly, doubly and circular linked lists
+│   ├── Queue/             # Linear, circular and linked-list queues
+│   ├── stack/             # Array & linked-list stacks, expression conversion/evaluation
+│   └── NPTEL Practice/    # NPTEL programming problems (weeks 0-7)
+├── Python/
+│   ├── 01_practice/
+│   ├── 02_control_flow_and_loops/
+│   ├── 03_Strings/
+│   ├── 04_Functions & Modules/
+│   ├── 06_OOPS/
+│   ├── 07_Other_Topics/
+│   ├── 08_Pattern_Printing/
+│   ├── 0x_Mini_Projects/
+│   └── College Assignments/
+├── C++/Basics/            # First steps in C++
+├── HTML/                  # Intro, headings & lists, tables, forms
+├── LICENSE
+└── README.md
 ```
-
-Folders are numbered roughly in the order topics were learned — scrolling top to bottom is basically watching me level up. ⬆️
 
 ---
 
-## 🗺️ Topics covered so far
+## 🗺️ What's covered
 
-| Language | Concepts |
-|:--------:|----------|
-| 🐍 **Python** | Basics, `if`/`else`, `for` loops, `match`-`case`, strings (manipulation & formatting), functions, OOP (classes, objects & constructors) |
-| 🇨 **C** | `scanf`/`printf` I/O, loops & conditionals, functions, pointers, arrays & 2D matrices, strings, recursion, structures, linked lists (singly, doubly, circular), stacks (array & linked-list based) |
-| ➕ **C++** | Fundamentals (basic input/output) |
+### C
 
-### 📝 NPTEL Practice problems (C)
+| Topic | Programs |
+|-------|----------|
+| **Arrays** | Bubble, selection, insertion, merge and quick sort; linear and binary search; merging two sorted arrays; deleting from a sorted array |
+| **Linked lists** | Singly, doubly and circular |
+| **Stacks** | Array-based and linked-list-based; infix to postfix/prefix; postfix/prefix evaluation |
+| **Queues** | Linear (array), circular (array) and linked-list queues |
+| **NPTEL problems** | I/O, loops, matrices, strings, recursion, pointers, structures (see below) |
+
+<details>
+<summary><b>NPTEL practice by week</b></summary>
 
 | Week | Topics |
 |:----:|--------|
 | 0 | Hello World, adding two integers |
-| 1 | Cuboid volume, voting eligibility check, basic arithmetic operations |
+| 1 | Cuboid volume, voting eligibility, basic arithmetic |
 | 2 | Alternating sum, longest run of even numbers, upper-triangular matrix check |
-| 3 | Factorial, parking fee calculation, Caesar cipher letter shift |
+| 3 | Factorial, parking fee calculation, Caesar cipher shift |
 | 4 | Generic search using pointers, removing duplicates, anagram check |
 | 5 | Collatz function, generating binary strings, merging sorted arrays |
 | 6 | Symmetric matrix check, Sudoku validator, Tic-Tac-Toe winner |
-| 7 | 3D vector operations and a student database using structures |
+| 7 | 3D vector operations, student database using structures |
 
-### 🚧 Work in progress
+</details>
 
-- `Python/07_Other_Topics/decorators.py` — decorators (coming soon)
-- `Python/0x_Mini_Projects/1_CALCULATOR` — a command-line calculator
+### Python
 
-*(This table grows as I learn more — check back later!)*
+| Folder | Topics |
+|--------|--------|
+| `01_practice` | Beginner exercises |
+| `02_control_flow_and_loops` | `if`/`else`, `for` loops, `match`-`case` |
+| `03_Strings` | Basics, manipulation, formatting |
+| `04_Functions & Modules` | Functions and practice problems |
+| `06_OOPS` | Classes, objects, constructors |
+| `07_Other_Topics` | Decorators, getters/setters, static and class methods |
+| `08_Pattern_Printing` | Pattern printing exercises |
+| `0x_Mini_Projects` | Command-line calculator |
+| `College Assignments` | Assignment solutions |
+
+### C++ and HTML
+
+- **C++:** basic input/output and fundamentals
+- **HTML:** page structure, headings and lists, tables, forms
 
 ---
 
-## ▶️ Running the code
-
-Clone the repo first:
+## ▶️ Getting started
 
 ```bash
 git clone https://github.com/subhrajeetshaw008-bit/Practice.git
 cd Practice
 ```
 
-Some folder names contain spaces or `&`, so wrap those paths in quotes.
+Some folder names contain spaces or `&`, so wrap paths in quotes.
 
-**🐍 Python**
+**C** (requires GCC)
 ```bash
-python "Python/<folder>/<file>.py"
+gcc "C/Queue/Circular_queue.c" -o circular_queue
+./circular_queue          # Windows: .\circular_queue.exe
 ```
 
-**🇨 C**
+**Python** (3.10+, because of `match`-`case`)
 ```bash
-gcc "C/<folder>/<file>.c" -o "C/<folder>/<file>"
-"./C/<folder>/<file>"
+python "Python/02_control_flow_and_loops/match1.py"
 ```
 
-**➕ C++**
+**C++** (requires g++)
 ```bash
-g++ "C++/<folder>/<file>.cpp" -o "C++/<folder>/<file>"
-"./C++/<folder>/<file>"
+g++ "C++/Basics/1.cpp" -o basics
+./basics
 ```
 
-> 💡 Compiled binaries (`*.exe`, `*.o`, `build/`) are git-ignored, so you'll need to compile the C/C++ files yourself.
+**HTML:** open any file in `HTML/` in your browser.
+
+> Compiled binaries (`*.exe`, `*.o`, `build/`) are git-ignored, so compile the C/C++ files yourself.
 
 ---
 
-## 📊 Repo stats
+## 🛣️ Roadmap
 
-![GitHub last commit](https://img.shields.io/github/last-commit/subhrajeetshaw008-bit/Practice?style=flat-square)
-![GitHub repo size](https://img.shields.io/github/repo-size/subhrajeetshaw008-bit/Practice?style=flat-square)
-![GitHub language count](https://img.shields.io/github/languages/count/subhrajeetshaw008-bit/Practice?style=flat-square)
+- [ ] Binary trees and BSTs in C
+- [ ] Graph traversals (BFS/DFS)
+- [ ] Priority queue and deque
+- [ ] More Python mini projects
+- [ ] Deeper C++ (classes, STL)
 
 ---
 
 ## 📜 License
 
-Licensed under the [MIT License](LICENSE) — feel free to browse, learn, or laugh at my early code. 😅
+Released under the [MIT License](LICENSE). Feel free to browse, learn, or laugh at my early code.
 
 ---
 
 <div align="center">
 
-⭐ **If you're learning to code too, fork this and start your own practice log!** ⭐
+⭐ If you're learning to code too, fork this and start your own practice log! ⭐
 
 </div>
