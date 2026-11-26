@@ -1,4 +1,4 @@
 *.exe
 *.o
 build/
-.vscode/
+.vscode/tempCodeRunnerFile.*
